@@ -238,7 +238,17 @@
         }
 
         .hero-text h1 span {
+            color: var(--secondary);
+            text-decoration: underline;
+            text-decoration-style:solid;
+            text-decoration-color: var(--primary);
+            text-decoration-thickness: 0.2rem;
+        }
+        .hero-text h3 span {
             color: var(--primary);
+        }
+        .hero-text-links {
+            font-weight: bold;
         }
 
         .hero-text p {
@@ -281,7 +291,19 @@
             transform: translateY(-10px);
             box-shadow: var(--shadow-dark);
         }
-
+        .skill-category-misc {
+            background-color: white;
+            /* border-radius: var(--border-radius-lg); */
+            padding: 30px;
+            /* box-shadow: var(--shadow);
+            transition: var(--transition); */
+            align-content: center;
+            text-align: center;
+        }
+        .skill-category-misc p {
+            font-weight: 500;
+            font-style: italic;
+        }
         .skill-category h3 {
             display: flex;
             align-items: center;
@@ -847,7 +869,7 @@
     <header id="header">
         <div class="container">
             <nav class="navbar">
-                <a href="index.html" class="logo">M<span>S</span></a>
+                <a href="index.html" class="logo">Mubashir<span>Shaikh</span></a>
                 <ul class="nav-links" id="navLinks">
                     <li><a href="index.html" class="active">Home</a></li>
                     <li><a href="about.html">About</a></li>
@@ -867,9 +889,13 @@
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>Hi, I'm <span>Mubashir Shaikh</span></h1>
-                    <h3>A Data Science student</h3>
-                    <p>I'm currently pursuing my Master's in Data Science, building upon my Bachelor's in Information Technology. Passionate about extracting insights from data and creating impactful solutions through machine learning and analytics.</p>
+                    <h1>I like building things that <span>think</span>🧠</h1>
+                    <h3>Data Scientist, engineer at heart. </h3>
+                    <p>I create systems that 
+                        <a href="https://github.com/Mubashirr101/EyeDentify" class="hero-text-links">identify</a>, 
+                        <a href="https://github.com/Mubashirr101/Wearable-data-analysis" class="hero-text-links">visualize</a>, 
+                        <a href="https://github.com/Mubashirr101/Loan-Approval-Prediction-Model" class="hero-text-links">predict</a> & 
+                        <a href="https://github.com/Mubashirr101/The_Automator" class="hero-text-links">automate</a> problems.</p>
                     <div class="hero-buttons">
                         <a href="#projects" class="btn btn-primary">View My Projects</a>
                         <a href="about.html" class="btn btn-outline">About Me</a>
@@ -963,6 +989,9 @@
                     <h3><i class="fas fa-gears"></i> MLOPS </h3>
                     <ul class="skill-list">
                         <li>
+                            <div class="skill-name">Linux</div>
+                        </li>
+                        <li>
                             <div class="skill-name">ETL pipelines</div>
                         </li>
                         <li>
@@ -970,22 +999,9 @@
                         </li>
                     </ul>
                 </div>
-                <div class="skill-category">
-                    <h3><i class="fas fa-camera"></i> Photography </h3>
-                    <ul class="skill-list">                       
-                        <li>
-                            <div class="skill-name">Image Editing & Color Correction</div>
-                        </li>
-                        <li>
-                            <div class="skill-name">Adobe Lightroom</div>
-                        </li>
-                        <li>
-                            <div class="skill-name">Adobe Photoshop</div>
-                        </li>
-                        <li>
-                            <div class="skill-name">Asset Organization & Editing Workflows</div>
-                        </li>
-                    </ul>
+                <div class="skill-category-misc" >
+                    <p >I also do photography ....</p>
+                    <a class="btn btn-outline" href="https://vsco.co/mubashirr-/gallery">Open Gallery</a>
                 </div>
 
             </div>
