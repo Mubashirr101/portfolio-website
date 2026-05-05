@@ -404,6 +404,8 @@ header.scrolled {
   overflow: hidden;
   box-shadow: var(--shadow);
   transition: var(--transition);
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
@@ -440,6 +442,9 @@ header.scrolled {
 
 .project-content {
   padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .project-tags {
@@ -460,7 +465,7 @@ header.scrolled {
 .project-links {
   display: flex;
   gap: 15px;
-  margin-top: 20px;
+  margin-top: auto;
 }
 
 /* Contact Section */
@@ -496,6 +501,39 @@ header.scrolled {
   justify-content: center;
   color: var(--primary);
   font-size: 1.2rem;
+}
+
+.social-links {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.social-link-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.social-link-item > div {
+    min-width: 0;
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  background-color: rgba(58, 134, 255, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+}
+
+.social-id {
+  font-size: 0.9rem;
+  word-break: break-all;
+  margin-bottom: 0;
+  min-width: 0;
 }
 
 .contact-form {
@@ -873,6 +911,18 @@ footer {
 
   .btn {
     padding: 10px 20px;
+  }
+
+  .project-links {
+    flex-wrap: wrap;
+  }
+
+  .project-links .btn {
+      flex: 1;
+      text-align: center;
+      padding: 8px 12px;
+      font-size: 0.85rem;
+      white-space: nowrap;
   }
 }
 
