@@ -92,6 +92,9 @@ function setActiveNavLink() {
     });
 }
 
+// Cache-bust the GitHub graph
+document.getElementById('gh-graph').src = 
+    'https://ghchart.rshah.org/2da44e/Mubashirr101?t=' + Date.now();
 
 
 window.addEventListener('scroll', setActiveNavLink);
