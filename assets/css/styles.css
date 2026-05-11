@@ -474,15 +474,18 @@ header.scrolled {
 }
 
 .contact-container {
-  display: grid;
+  display: flex;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 50px;
+  justify-content: center;
+
 }
 
 .contact-info {
   display: flex;
   flex-direction: column;
   gap: 25px;
+  align-items: center;
 }
 
 .contact-item {
@@ -506,6 +509,7 @@ header.scrolled {
 .social-links {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 25px;
 }
 .social-link-item {
