@@ -508,9 +508,12 @@ header.scrolled {
 
 .social-links {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 25px;
+  margin-top: 20px;
 }
 .social-link-item {
   display: flex;
@@ -532,6 +535,12 @@ header.scrolled {
   justify-content: center;
   font-size: 1.2rem;
 }
+
+.social-icon:hover {
+  background-color: rgba(38, 103, 204, 0.6);
+  transform: translateY(-2px);
+}
+
 
 .social-id {
   font-size: 0.9rem;
@@ -592,14 +601,14 @@ footer {
   margin-bottom: 50px;
 }
 
-.footer-col h3 {
+.footer-col1 h3 {
   color: white;
   margin-bottom: 25px;
   position: relative;
   padding-bottom: 10px;
 }
 
-.footer-col h3::after {
+.footer-col1 h3::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -609,17 +618,42 @@ footer {
   background-color: var(--primary);
 }
 
-.footer-col p {
+.footer-col1 p {
   color: white;
   opacity: 0.5;
 }
 
+.footer-col2 h3 {
+  color: white;
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+
+.footer-col2 h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 2px;
+  background-color: var(--primary);
+}
+
+.footer-col2 p {
+  color: white;
+  opacity: 0.5;
+}
 .footer-links {
   list-style: none;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
 
 .footer-links li {
-  margin-bottom: 12px;
+  margin-bottom: 0;
 }
 
 .footer-links a {
@@ -629,30 +663,9 @@ footer {
 
 .footer-links a:hover {
   color: var(--primary);
-  padding-left: 5px;
 }
 
-.social-links {
-  display: flex;
-  gap: 15px;
-  margin-top: 20px;
-}
 
-.social-link {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: rgba(255, 255, 255, 0.1);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: var(--transition);
-}
-
-.social-link:hover {
-  background-color: var(--primary);
-  transform: translateY(-5px);
-}
 
 .copyright {
   text-align: center;
@@ -927,6 +940,15 @@ footer {
       padding: 8px 12px;
       font-size: 0.85rem;
       white-space: nowrap;
+  }
+
+  .social-links {
+        flex-direction: column;
+  }
+
+  .footer-links {
+        flex-direction: column;
+        gap: 12px;
   }
 }
 
