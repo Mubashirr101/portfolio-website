@@ -414,7 +414,7 @@ header.scrolled {
 }
 
 .project-img {
-  height: 200px;
+  height: 245px;
   width: 100%;
   background-color: var(--gray-light);
   display: flex;
@@ -426,18 +426,20 @@ header.scrolled {
   overflow: hidden;
 }
 
+.project-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .project-img::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    45deg,
-    rgba(58, 134, 255, 0.2),
-    rgba(131, 56, 236, 0.2)
-  );
+  height: 100%; 
 }
 
 .project-content {
