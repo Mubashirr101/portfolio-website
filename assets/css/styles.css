@@ -961,7 +961,237 @@ footer {
   }
 }
 
-/* Netlify Form Success Styles */
+/* ── Dashboards & Analytics Section ── */
+.dashboards {
+  background-color: white;
+}
+
+.dashboards-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.dashboard-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--light);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  border: 1px solid var(--gray-light);
+}
+
+.dashboard-card:hover {
+  box-shadow: var(--shadow-dark);
+  transform: translateY(-4px);
+}
+
+/* Image side */
+.dashboard-img-link {
+  display: block;
+  height: 100%;
+}
+
+.dashboard-img {
+  position: relative;
+  height: 100%;
+  min-height: 260px;
+  overflow: hidden;
+  background: var(--gray-light);
+}
+
+.dashboard-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.dashboard-card:hover .dashboard-img img {
+  transform: scale(1.04);
+}
+
+.dashboard-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(26, 26, 46, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.dashboard-card:hover .dashboard-img-overlay {
+  opacity: 1;
+}
+
+.dashboard-img-overlay span {
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(58, 134, 255, 0.85);
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+
+/* Placeholder image for SQL / future cards */
+.dashboard-img--placeholder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  color: var(--gray);
+  font-size: 3.5rem;
+  background: linear-gradient(135deg, #f0f4ff 0%, #e9ecef 100%);
+}
+
+.dashboard-img--placeholder span {
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Meta / text side */
+.dashboard-meta {
+  padding: 28px 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.dashboard-meta-left h3 {
+  font-size: 1.25rem;
+  margin-bottom: 6px;
+  color: var(--dark);
+}
+
+.dashboard-meta-left p {
+  font-size: 0.9rem;
+  color: var(--gray);
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+/* Tool badge */
+.dashboard-tool {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 6px;
+}
+
+.dashboard-tool.powerbi {
+  background: rgba(243, 186, 47, 0.15);
+  color: #c4930a;
+}
+
+.dashboard-tool.powerbi img {
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
+}
+
+.dashboard-tool.sql {
+  background: rgba(58, 134, 255, 0.12);
+  color: var(--primary);
+}
+
+/* Stats row — glanceable numbers */
+.dashboard-stats {
+  display: flex;
+  gap: 20px;
+  padding: 12px 0;
+  border-top: 1px solid var(--gray-light);
+  border-bottom: 1px solid var(--gray-light);
+}
+
+.dashboard-stat {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.stat-value {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--primary);
+  font-family: "Roboto Mono", monospace;
+}
+
+.stat-label {
+  font-size: 0.72rem;
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dashboard-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.dashboard-links {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.dashboard-links .btn {
+  font-size: 0.9rem;
+  padding: 9px 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .dashboard-card {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-img {
+    min-height: 220px;
+    height: 220px;
+  }
+}
+
+@media (max-width: 576px) {
+  .dashboard-meta {
+    padding: 20px;
+  }
+
+  .dashboard-stats {
+    gap: 14px;
+  }
+
+  .dashboard-links {
+    flex-wrap: wrap;
+  }
+
+  .dashboard-links .btn {
+    flex: 1;
+    justify-content: center;
+  }
+}
+
+
 .form-success {
   background-color: rgba(56, 176, 0, 0.1);
   border: 1px solid var(--success);
