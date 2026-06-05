@@ -249,25 +249,59 @@
         <div class="container">
             <div class="section-header">
                 <h2>Dashboards & Analytics</h2>
-                <p>Business intelligence and data storytelling — turning raw data into decisions</p>
+                <p>Business intelligence and data storytelling, turning raw data into decisions</p>
             </div>
             <div class="dashboards-container">
 
-                <!-- Power BI: Data Jobs Dashboard -->
+                <!-- personal finance tracker -->
                 <div class="dashboard-card">
-                    <a href="https://github.com/Mubashirr101/PowerBI-practice/tree/main/Dashboards" target="_blank" class="dashboard-img-link">
+                    <button class="dashboard-img-link" onclick="openModal('modal-1')">
                         <div class="dashboard-img">
-                            <img src="https://github.com/Mubashirr101/PowerBI-practice/raw/main/preview-images/Dashboard-1_page-0001.jpg" alt="Data Jobs Dashboard Overview">
+                            <img src="https://raw.githubusercontent.com/Mubashirr101/Personal-Finance-Dashboard/refs/heads/main/preview-images/personal-finance-tracker_page-0001.jpg" alt="Data Jobs Dashboard Overview">
                             <div class="dashboard-img-overlay">
-                                <span><i class="fas fa-expand-alt"></i> View Dashboard</span>
+                                <span><i class="fas fa-expand-alt"></i> Preview Pages</span>
                             </div>
                         </div>
-                    </a>
+                    </button>
+                    <div class="dashboard-meta">
+                        <div class="dashboard-meta-left">
+                            <span class="dashboard-tool powerbi"><img src="https://raw.githubusercontent.com/microsoft/PowerBI-Icons/main/PNG/Power-BI.png" alt="Power BI"> Power BI</span>
+                            <h3>Personal Finance Dashboard</h3>
+                            <p>A 5-page interactive Power BI report for end-to-end personal finance tracking : income, expenses, budgets, investments, and net worth.</p>
+                        </div>
+                        <div class="dashboard-stats">
+                            <div class="dashboard-stat"><span class="stat-value">₹2M</span><span class="stat-label">Net Worth</span></div>
+                            <div class="dashboard-stat"><span class="stat-value">15.24%</span><span class="stat-label">Investment rate</span></div>
+                            <div class="dashboard-stat"><span class="stat-value">5-page</span><span class="stat-label">Drill-through</span></div>
+                        </div>
+                        <div class="dashboard-tags">
+                            <span class="project-tag">DAX Measures</span>
+                            <span class="project-tag">KPIs</span>
+                            <span class="project-tag">Heatmaps</span>
+                            <span class="project-tag">Drill-Through</span>
+                            <span class="project-tag">PowerQuery</span>
+                        </div>
+                        <div class="dashboard-links">
+                            <a href="https://github.com/Mubashirr101/Personal-Finance-Dashboard" class="btn btn-primary" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+                            <button class="btn btn-outline" onclick="openModal('modal-1')"><i class="fas fa-images"></i> Preview Pages</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- data job 2024 analysis-->
+                <div class="dashboard-card">
+                    <button class="dashboard-img-link" onclick="openModal('modal-2')">
+                        <div class="dashboard-img">
+                            <img src="https://raw.githubusercontent.com/Mubashirr101/data-jobs-dashboard/main/preview-images/Dashboard-1_page-0001.jpg" alt="Data Jobs Dashboard Overview">
+                            <div class="dashboard-img-overlay">
+                                <span><i class="fas fa-expand-alt"></i> Preview Pages</span>
+                            </div>
+                        </div>
+                    </button>
                     <div class="dashboard-meta">
                         <div class="dashboard-meta-left">
                             <span class="dashboard-tool powerbi"><img src="https://raw.githubusercontent.com/microsoft/PowerBI-Icons/main/PNG/Power-BI.png" alt="Power BI"> Power BI</span>
                             <h3>Data Jobs Market 2024</h3>
-                            <p>Global data job market — salary trends, WFH rates, hiring platforms &amp; demand by role.</p>
+                            <p>Global data job market : salary trends, WFH rates, hiring platforms &amp; demand by role.</p>
                         </div>
                         <div class="dashboard-stats">
                             <div class="dashboard-stat">
@@ -290,52 +324,120 @@
                             <span class="project-tag">Bing Maps</span>
                         </div>
                         <div class="dashboard-links">
-                            <a href="https://github.com/Mubashirr101/PowerBI-practice/tree/main/Dashboards" class="btn btn-primary" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
-                            <a href="https://github.com/Mubashirr101/PowerBI-practice/raw/main/preview-images/Dashboard-1_page-0002.jpg" class="btn btn-outline" target="_blank">Page 2 Preview</a>
+                            <a href="https://github.com/Mubashirr101/Data-Jobs-Dashboard" class="btn btn-primary" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
+                            <button class="btn btn-outline" onclick="openModal('modal-2')"><i class="fas fa-images"></i> Preview Pages</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Placeholder: SQL Project -->
-                <div class="dashboard-card dashboard-card--sql">
-                    <div class="dashboard-img dashboard-img--placeholder">
-                        <i class="fas fa-database"></i>
-                        <span>SQL Project</span>
+                
+                   <!-- Placeholder: SQL Project -->
+                    <div class="dashboard-card dashboard-card--sql">
+                            <a href="https://github.com/Mubashirr101/SQL-project" target="_blank" class="dashboard-img-link">
+                                <div class="dashboard-img dashboard-img--placeholder" style="background: linear-gradient(135deg, #1a1a2e 0%, #2d2d44 100%);">
+                                    <i class="fas fa-database" style="color: #3a86ff;"></i>
+                                </div>
+                            </a>
+                        <div class="dashboard-meta">
+                            <div class="dashboard-meta-left">
+                                <span class="dashboard-tool sql"><i class="fas fa-database"></i> SQL</span>
+                                <h3>Data Job Market Analysis</h3>
+                                <p>End-to-end SQL analysis of 2023 job postings, uncovering top-paying roles, most in-demand skills, and the optimal skills to learn for maximum salary ROI.</p>
+                            </div>
+                            <div class="dashboard-stats">
+                                <div class="dashboard-stat">
+                                    <span class="stat-value">4</span>
+                                    <span class="stat-label">Tables joined</span>
+                                </div>
+                                <div class="dashboard-stat">
+                                    <span class="stat-value">700K+</span>
+                                    <span class="stat-label">Rows processed</span>
+                                </div>
+                                <div class="dashboard-stat">
+                                    <span class="stat-value">CTEs</span>
+                                    <span class="stat-label">& SubQueries</span>
+                                </div>
+                            </div>
+                            <div class="dashboard-tags">
+                                <span class="project-tag">PostgreSQL</span>
+                                <span class="project-tag">Joins</span>
+                                <span class="project-tag">CTEs</span>
+                                <span class="project-tag">Aggregations</span>
+                                <span class="project-tag">Python viz</span>
+                                
+                            </div>
+                            <div class="dashboard-links">
+                                <a href="https://github.com/Mubashirr101/SQL-project" class="btn btn-outline" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="dashboard-meta">
-                        <div class="dashboard-meta-left">
-                            <span class="dashboard-tool sql"><i class="fas fa-database"></i> SQL</span>
-                            <h3>Coming Soon</h3>
-                            <p>SQL analysis projects — joins, aggregations, window functions and data wrangling at scale.</p>
-                        </div>
-                        <div class="dashboard-stats">
-                            <div class="dashboard-stat">
-                                <span class="stat-value">—</span>
-                                <span class="stat-label">Tables joined</span>
-                            </div>
-                            <div class="dashboard-stat">
-                                <span class="stat-value">—</span>
-                                <span class="stat-label">Rows processed</span>
-                            </div>
-                            <div class="dashboard-stat">
-                                <span class="stat-value">—</span>
-                                <span class="stat-label">Queries written</span>
-                            </div>
-                        </div>
-                        <div class="dashboard-tags">
-                            <span class="project-tag">PostgreSQL</span>
-                            <span class="project-tag">Window Functions</span>
-                            <span class="project-tag">CTEs</span>
-                        </div>
-                        <div class="dashboard-links">
-                            <a href="https://github.com/Mubashirr101" class="btn btn-outline" target="_blank"><i class="fab fa-github"></i> GitHub</a>
-                        </div>
-                    </div>
-                </div>
 
             </div>
         </div>
     </section>
+
+    <!-- Modal for Dashboard 1 -->
+    <div id="modal-1" class="db-modal" role="dialog" aria-modal="true">
+        <div class="db-modal-backdrop" onclick="closeModal('modal-1')"></div>
+        <div class="db-modal-box">
+            <div class="db-modal-header">
+                <div class="db-modal-title"><i class="fas fa-chart-bar"></i><span>Personal Finance Dashboard : All Pages</span></div>
+                <button class="db-modal-close" onclick="closeModal('modal-1')">&times;</button>
+            </div>
+            <div class="db-modal-body">
+                <div class="db-modal-page">
+                    <p class="db-page-label"><span>Page 1</span> Home</p>
+                    <img src="https://raw.githubusercontent.com/Mubashirr101/Personal-Finance-Dashboard/refs/heads/main/preview-images/personal-finance-tracker_page-0001.jpg" alt="Page 1">
+                </div>
+                <div class="db-modal-page">
+                    <p class="db-page-label"><span>Page 2</span> Income & Expenses</p>
+                    <img src="https://raw.githubusercontent.com/Mubashirr101/Personal-Finance-Dashboard/refs/heads/main/preview-images/personal-finance-tracker_page-0002.jpg" alt="Page 2">
+                </div>
+                <div class="db-modal-page">
+                    <p class="db-page-label"><span>Page 3</span> Monthly Budget</p>
+                    <img src="https://raw.githubusercontent.com/Mubashirr101/Personal-Finance-Dashboard/refs/heads/main/preview-images/personal-finance-tracker_page-0003.jpg" alt="Page 3">
+                </div>
+                <div class="db-modal-page">
+                    <p class="db-page-label"><span>Page 4</span> Investments</p>
+                    <img src="https://raw.githubusercontent.com/Mubashirr101/Personal-Finance-Dashboard/refs/heads/main/preview-images/personal-finance-tracker_page-0004.jpg" alt="Page 4">
+                </div>
+                <div class="db-modal-page">
+                    <p class="db-page-label"><span>Page 5</span> Net Worth</p>
+                    <img src="https://raw.githubusercontent.com/Mubashirr101/Personal-Finance-Dashboard/refs/heads/main/preview-images/personal-finance-tracker_page-0005.jpg" alt="Page 5">
+                </div>
+            </div>
+            <div class="db-modal-footer">
+                <a href="https://github.com/Mubashirr101/Personal-Finance-Dashboard" class="btn btn-primary" target="_blank"><i class="fab fa-github"></i> Open on GitHub</a>
+                <button class="btn btn-outline" onclick="closeModal('modal-1')">Close</button>
+            </div>
+        </div>
+    </div>
+    <!-- Modal for dashboard 2 -->
+   <div id="modal-2" class="db-modal" role="dialog" aria-modal="true">
+    <div class="db-modal-backdrop" onclick="closeModal('modal-2')"></div>
+        <div class="db-modal-box">
+            <div class="db-modal-header">
+                <div class="db-modal-title"><i class="fas fa-chart-bar"></i><span>Data Jobs Market 2024 — All Pages</span></div>
+                <button class="db-modal-close" onclick="closeModal('modal-2')">&times;</button>
+            </div>
+            <div class="db-modal-body">
+                <div class="db-modal-page">
+                    <p class="db-page-label"><span>Page 1</span> Overview</p>
+                    <img src="https://raw.githubusercontent.com/Mubashirr101/data-jobs-dashboard/main/preview-images/Dashboard-1_page-0001.jpg" alt="Page 1 — Overview" loading="lazy">
+                </div>
+                <div class="db-modal-page">
+                    <p class="db-page-label"><span>Page 2</span> Drill-Through: Data Engineer</p>
+                    <img src="https://raw.githubusercontent.com/Mubashirr101/data-jobs-dashboard/main/preview-images/Dashboard-1_page-0002.jpg" alt="Page 2 — Drill Through" loading="lazy">
+                </div>
+            </div>
+            <div class="db-modal-footer">
+                <a href="https://github.com/Mubashirr101/Data-Jobs-Dashboard" class="btn btn-primary" target="_blank"><i class="fab fa-github"></i> Open on GitHub</a>
+                <button class="btn btn-outline" onclick="closeModal('modal-2')">Close</button>
+            </div>
+        </div>
+    </div>
+
+  
 
     <!-- Contact Section -->
     <section class="contact section" id="contact">
@@ -373,6 +475,7 @@
         </div>
     </section>
 
+
     <!-- Footer -->
     <footer>
         <div class="container">
@@ -398,5 +501,23 @@
 
     <!-- JavaScript -->
     <script src="assets/js/script.js"></script>
+    <!-- Dashboard Modal Script -->
+    <script>
+        function openModal(id) {
+            document.getElementById(id).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal(id) {
+            document.getElementById(id).classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.db-modal.active')
+                    .forEach(m => { m.classList.remove('active'); });
+                document.body.style.overflow = '';
+            }
+        });
+    </script>
 </body>
 </html>

@@ -997,7 +997,7 @@ footer {
 .dashboard-img {
   position: relative;
   height: 100%;
-  min-height: 260px;
+  min-height: 320px;
   overflow: hidden;
   background: var(--gray-light);
 }
@@ -1005,11 +1005,18 @@ footer {
 .dashboard-img img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background-color: white;
   display: block;
   transition: transform 0.4s ease;
 }
-
+button.dashboard-img-link {
+    all: unset;
+    display: block;
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+}
 .dashboard-card:hover .dashboard-img img {
   transform: scale(1.04);
 }
@@ -1357,3 +1364,155 @@ footer {
   color: var(--gray);
   margin-top: 2px;
 }
+/* ── Dashboard Preview Modal ── */
+.db-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.db-modal-body {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+  gap: 16px;
+  padding: 20px 24px;
+  overflow-y: auto;
+}
+.db-modal.active {
+  display: flex;
+}
+
+.db-modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 30, 0.75);
+  backdrop-filter: blur(4px);
+  cursor: pointer;
+}
+
+.db-modal-box {
+  position: relative;
+  z-index: 1;
+  background: white;
+  border-radius: var(--border-radius-lg);
+  width: 100%;
+  max-width: 1100px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 25px 60px rgba(0,0,0,0.35);
+  overflow: hidden;
+  animation: modalIn 0.25s ease;
+}
+
+@keyframes modalIn {
+  from { opacity: 0; transform: translateY(20px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.db-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  border-bottom: 1px solid var(--gray-light);
+  flex-shrink: 0;
+}
+
+.db-modal-title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--dark);
+}
+
+.db-modal-title i {
+  color: var(--primary);
+  font-size: 1.1rem;
+}
+
+.db-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--gray);
+  cursor: pointer;
+  padding: 0 4px;
+  transition: color 0.2s;
+}
+
+.db-modal-close:hover {
+  color: var(--dark);
+}
+
+.db-modal-body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  padding: 20px 24px;
+  overflow-y: auto;
+}
+
+.db-modal-page {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.db-page-label {
+  font-size: 0.8rem;
+  color: var(--gray);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.db-page-label span {
+  background: var(--primary);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 20px;
+}
+
+.db-modal-page img {
+  width: 100%;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--gray-light);
+  display: block;
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+}
+
+.db-modal-page img:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-dark);
+}
+
+.db-modal-footer {
+  display: flex;
+  gap: 12px;
+  padding: 16px 24px;
+  border-top: 1px solid var(--gray-light);
+  flex-shrink: 0;
+}
+
+/* Responsive modal */
+@media (max-width: 700px) {
+  .db-modal-body {
+    grid-template-columns: 1fr;
+  }
+
+  .db-modal-box {
+    max-height: 95vh;
+  }
+}
+
