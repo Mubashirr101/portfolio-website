@@ -16,7 +16,7 @@
             <nav class="navbar">
                 <a href="index.html" class="logo">Mubashir<span>Shaikh</span></a>
                 <ul class="nav-links" id="navLinks">
-                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="index.html#home" class="active">Home</a></li>
                     <li><a href="about.html">About</a></li>
                     <!-- <li><a href="blog.html">Blog</a></li>
                     <li><a href="resources.html">Resources</a></li> -->
@@ -151,15 +151,21 @@
                     <div class="skill-chip"><img src="https://img.icons8.com/color/48/microsoft-excel-2019.png" alt="Excel"><span>Excel</span></div>
                     <div class="skill-chip"><img src="https://img.icons8.com/color/48/microsoft-word-2019.png" alt="Word"><span>Word</span></div>
                     <div class="skill-chip"><img src="https://img.icons8.com/color/48/microsoft-powerpoint-2019.png" alt="PowerPoint"><span>PowerPoint</span></div>
+                    <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/obsidian.png" alt="Obsidian"><span>Obsidian</span></div>
+                    <div class="skill-chip"><img src="https://api.iconify.design/logos/trello.svg" alt="Trello"><span>Trello</span></div>
+
                 </div>
             </div>
             <div class="skill-group">
                 <div class="skill-group-header"><i class="fas fa-paintbrush"></i><span>Creative Suite</span></div>
                     <div class="skill-chips">
+                        <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/png/figma.png" alt="Figma"><span>Figma</span></div>
+                        <div class="skill-chip"><img src="https://img.icons8.com/?size=100&id=EZQdGLNeo7JI&format=png&color=000000" alt="Canva"><span>Canva</span></div>
                         <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/gilbarbara/logos@latest/logos/adobe-lightroom.svg" alt="Lightroom"><span>Lightroom</span></div>                        
                         <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/gilbarbara/logos@latest/logos/adobe-photoshop.svg" alt="Photoshop"><span>Photoshop</span></div>
                         <div class="skill-chip"><img src="https://cdn.jsdelivr.net/gh/gilbarbara/logos@latest/logos/adobe-after-effects.svg" alt="After Effects"><span>After Effects</span></div>
                         <div class="skill-chip"><img src="https://img.icons8.com/?size=100&id=dqlXCvQrhIDX&format=png&color=000000" alt="Snapseed"><span>Snapseed</span></div>
+                       
                     </div>
                 </div>
             </div>
@@ -426,7 +432,7 @@
                     <img src="https://raw.githubusercontent.com/Mubashirr101/data-jobs-dashboard/main/preview-images/Dashboard-1_page-0001.jpg" alt="Page 1 — Overview" loading="lazy">
                 </div>
                 <div class="db-modal-page">
-                    <p class="db-page-label"><span>Page 2</span> Drill-Through: Data Engineer</p>
+                    <p class="db-page-label"><span>Page 2</span> Drill-Through Page</p>
                     <img src="https://raw.githubusercontent.com/Mubashirr101/data-jobs-dashboard/main/preview-images/Dashboard-1_page-0002.jpg" alt="Page 2 — Drill Through" loading="lazy">
                 </div>
             </div>
@@ -500,24 +506,6 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="assets/js/script.js"></script>
-    <!-- Dashboard Modal Script -->
-    <script>
-        function openModal(id) {
-            document.getElementById(id).classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-        function closeModal(id) {
-            document.getElementById(id).classList.remove('active');
-            document.body.style.overflow = '';
-        }
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                document.querySelectorAll('.db-modal.active')
-                    .forEach(m => { m.classList.remove('active'); });
-                document.body.style.overflow = '';
-            }
-        });
-    </script>
+    <script src="assets/js/script.js"></script>   
 </body>
 </html>

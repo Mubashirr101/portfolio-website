@@ -98,3 +98,20 @@ document.getElementById('gh-graph').src =
 
 
 window.addEventListener('scroll', setActiveNavLink);
+
+// Dashboard Modal Script
+function openModal(id) {
+            document.getElementById(id).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeModal(id) {
+            document.getElementById(id).classList.remove('active');
+            document.body.style.overflow = '';
+        }
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.db-modal.active')
+                    .forEach(m => { m.classList.remove('active'); });
+                document.body.style.overflow = '';
+            }
+        });
