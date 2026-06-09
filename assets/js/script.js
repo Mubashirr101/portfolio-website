@@ -28,23 +28,126 @@ window.addEventListener('scroll', () => {
 });
 
 
-// Animate skill bars on scroll
-function animateSkillBars() {
-    const skillBars = document.querySelectorAll('.skill-progress');
+// ── Scroll-reveal via IntersectionObserver ──────────────────────────────────
 
-    skillBars.forEach(bar => {
-        const barPosition = bar.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight / 1.3;
+function initScrollReveal() {
+    const threshold = 0.12;
 
-        if (barPosition < screenPosition) {
-            bar.style.width = bar.style.width; // This triggers the CSS transition
-        }
-    });
+    // 1. Generic .reveal elements
+    const revealObs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                revealObs.unobserve(entry.target);
+            }
+        });
+    }, { threshold });
+
+    document.querySelectorAll('.reveal, .reveal-stagger').forEach(el => revealObs.observe(el));
+
+    // 2. Section headers
+    const headerObs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                headerObs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.section-header').forEach(el => headerObs.observe(el));
+
+    // 3. Project & dashboard cards — stagger within the grid
+    const cardObs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const idx = Array.from(entry.target.parentElement.children).indexOf(entry.target);
+                entry.target.style.transitionDelay = (idx * 0.08) + 's';
+                entry.target.classList.add('visible');
+                cardObs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.project-card, .dashboard-card').forEach(el => cardObs.observe(el));
+
+    // 4. Skill chips per group
+    const chipObs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('chips-visible');
+                chipObs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    document.querySelectorAll('.skill-chips').forEach(el => chipObs.observe(el));
+
+    // 5. GitHub strip
+    const ghObs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                ghObs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.github-strip-inner').forEach(el => ghObs.observe(el));
+
+    // 6. Contact social icons
+    const socialObs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                socialObs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.3 });
+
+    document.querySelectorAll('.social-link-item').forEach(el => socialObs.observe(el));
+
+    // 7. Stat values — colour pulse when dashboard cards enter view
+    const statObs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.querySelectorAll('.stat-value').forEach(el => {
+                    el.classList.add('counting');
+                    el.addEventListener('animationend', () => el.classList.remove('counting'), { once: true });
+                });
+                statObs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.4 });
+
+    document.querySelectorAll('.dashboard-card').forEach(el => statObs.observe(el));
+
+    // 8. Timeline items (about.html)
+    const timelineObs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                timelineObs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.2 });
+
+    document.querySelectorAll('.timeline-item').forEach(el => timelineObs.observe(el));
+
+    // 9. Approach cards — "Beyond the Code" section
+    const approachObs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                approachObs.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.25 });
+
+    document.querySelectorAll('.approach-card').forEach(el => approachObs.observe(el));
 }
 
-// Initialize skill bars animation
-window.addEventListener('load', animateSkillBars);
-window.addEventListener('scroll', animateSkillBars);
+window.addEventListener('DOMContentLoaded', initScrollReveal);
 
 // Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
